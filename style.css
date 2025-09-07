@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex; justify-content: center; align-items: center;
+  height: 100vh; margin: 0;
+}
+.login-box, .panel {
+  background: #00334d; color: #fff;
+  padding: 20px; border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 350px; text-align: center;
+}
+input, select, button {
+  width: 90%; margin: 8px 0; padding: 10px;
+  border: none; border-radius: 8px;
+}
+button {
+  background: orange; color: white; font-weight: bold;
+  cursor: pointer;
+}
+table {
+  width: 100%; border-collapse: collapse;
+  margin-top: 10px; font-size: 14px;
+}
+th, td {
+  border: 1px solid #555; padding: 5px;
+}
