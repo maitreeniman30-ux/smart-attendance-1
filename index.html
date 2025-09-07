@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Smart Attendance System</h2>
+    <label for="role">Select Role</label>
+    <select id="role">
+      <option value="student">👩‍🎓 Student</option>
+      <option value="teacher">👨‍🏫 Teacher</option>
+      <option value="admin">🔧 Admin</option>
+    </select>
+
+    <div id="common-fields">
+      <input type="text" id="userid" placeholder="Enter User ID">
+      <input type="text" id="name" placeholder="Enter Name">
+      <input type="text" id="class" placeholder="Enter Class">
+    </div>
+
+    <div id="admin-fields" style="display:none;">
+      <input type="password" id="password" placeholder="Enter Password">
+    </div>
+
+    <button onclick="login()">Login</button>
+  </div>
+</body>
+</html>
