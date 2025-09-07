@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="libs/html5-qrcode.min.js"></script>
+  <script src="libs/chart.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="panel">
+    <h2>👩‍🎓 Student Panel</h2>
+    <button onclick="scanQR()">📷 Scan QR Code</button>
+    <button onclick="takePhoto()">😊 Take Photo</button>
+    <button onclick="trackLocation()">📍 Track Location</button>
+    <button onclick="markAttendance()">✅ Mark Attendance</button>
+    <p id="attendance-status"></p>
+    <canvas id="attendanceChart"></canvas>
+  </div>
+</body>
+</html>
