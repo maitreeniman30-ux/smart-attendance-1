@@ -17,17 +17,64 @@
       <option value="admin">🔧 Admin</option>
     </select>
 
-    <div id="common-fields">
-      <input type="text" id="userid" placeholder="Enter User ID">
+       <div id="commonFields">
+      <label>User ID</label>
+      <input type="text" id="userId" placeholder="Enter User ID">
+    </div>
+
+    <div id="nameField">
+      <label>Name</label>
       <input type="text" id="name" placeholder="Enter Name">
+    </div>
+
+    <div id="classField">
+      <label>Class</label>
       <input type="text" id="class" placeholder="Enter Class">
     </div>
 
-    <div id="admin-fields" style="display:none;">
+    <div id="passwordField" class="hidden">
+      <label>Password</label>
       <input type="password" id="password" placeholder="Enter Password">
     </div>
 
     <button onclick="login()">Login</button>
   </div>
+
+  <script>
+    function toggleFields() {
+      const role = document.getElementById("role").value;
+      document.getElementById("nameField").style.display = (role === "Admin") ? "none" : "block";
+      document.getElementById("classField").style.display = (role === "Admin") ? "none" : "block";
+      document.getElementById("passwordField").style.display = (role === "Admin") ? "block" : "none";
+    }
+
+    function login() {
+      const role = document.getElementById("role").value;
+      const userId = document.getElementById("userId").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const className = document.getElementById("class").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (role === "Admin") {
+        if (userId === "Maitree" && password === "001") {
+          alert("✅ Welcome Admin Maitree!");
+        } else {
+          alert("❌ Invalid Admin credentials!");
+        }
+      } else if (role === "Teacher") {
+        if (userId && name && className) {
+          alert(✅ Welcome Teacher ${name} (Class: ${className}));
+        } else {
+          alert("⚠ Please fill all fields!");
+        }
+      } else if (role === "Student") {
+        if (userId && name && className) {
+          alert(✅ Welcome Student ${name} (Class: ${className}));
+        } else {
+          alert("⚠ Please fill all fields!");
+        }
+      }
+    }
+  </script>
 </body>
 </html>
